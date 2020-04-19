@@ -1,0 +1,51 @@
+{
+  "name": "feed-content-viewer",
+  "version": "0.0.1",
+  "description": "A simple an configurable web page to see embedded content",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next src",
+    "build": "next build src",
+    "start": "next start src",
+    "test": "jest --watch",
+    "test:ci": "jest --ci",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianunlam/feed-content-viewer.git"
+  },
+  "keywords": [
+    "viewer",
+    "embedded",
+    "content"
+  ],
+  "author": "Brian Alonso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brianunlam/feed-content-viewer/issues"
+  },
+  "homepage": "https://github.com/brianunlam/feed-content-viewer#readme",
+  "dependencies": {
+    "isomorphic-unfetch": "3.0.0",
+    "next": "^9.3.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.0",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.4",
+    "babel-jest": "^25.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.3.0",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
+  },
+  "engines": { "node": ">=12"}
+}
