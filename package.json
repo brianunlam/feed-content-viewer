@@ -9,7 +9,10 @@
     "start": "next start src",
     "test": "jest --watch",
     "test:ci": "jest --ci",
-    "postinstall": "npm run build"
+    "postinstall": "npm lint:ts; nrpm lint:ts; npm run build",
+    "prettier": "prettier  --write **/*.{ts,tsx,js}",
+    "lint:ts": "npm run prettier && tslint -c tslint.json -t stylish --fix {pages,src,server}/**/*.{ts,tsx}",
+    "lint:types": "tsc -p . --noEmit"
   },
   "repository": {
     "type": "git",
@@ -44,7 +47,12 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.3.0",
+    "prettier": "2.0.2",
     "ts-jest": "^25.4.0",
+    "tslint": "6.1.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-eslint-rules": "5.4.0",
+    "tslint-react": "4.2.0",
     "typescript": "^3.8.3"
   },
   "engines": {
